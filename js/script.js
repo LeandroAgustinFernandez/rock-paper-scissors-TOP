@@ -21,19 +21,18 @@ function computerSelection() {
   return pieces[index];
 }
 
-function playerSelection(e) {
-  let input = e.target.dataset.piece
-  let validOption = pieces.find((item) => item === input.toLowerCase());
-  if (!validOption) {
-    console.log("This is not an option.");
-    return false;
-  } else {
-    return input;
-  }
-}
+// function playerSelection(e) {
+//   let input = e.target.dataset.piece
+//   let validOption = pieces.find((item) => item === input.toLowerCase());
+//   if (!validOption) {
+//     console.log("This is not an option.");
+//     return false;
+//   } else {
+//     return input;
+//   }
+// }
 
 function computerPlay(e) {
-  
   let computer = computerSelection();
   let player = e.target.dataset.piece;
   console.log({computer,player});
