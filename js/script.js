@@ -1,15 +1,28 @@
 const pieces = ["rock", "paper", "scissor"];
+const buttonsContainer = document.querySelector('.btnActions');
+const playButtons = document.querySelectorAll('.btn')
+const resultContainer = document.querySelector('.result')
+const paragraphResult = document.createElement('p');
+paragraphResult.classList.add('resultText')
+const score = {
+  player: 0,
+  computer: 0,
+  tie: 0
+ }
+playButtons.forEach(btn => btn.addEventListener('click',computerPlay))
+
+function gameInfomation(string) {
+  paragraphResult.textContent = string
+  resultContainer.appendChild(paragraphResult)
+}
 
 function computerSelection() {
   let index = Math.floor(Math.random() * 3);
   return pieces[index];
 }
 
-function playerSelection() {
-  let input =
-    prompt(`Select your weapon!
-    Rock Paper Scissor`) || "Cancel";
-  console.log(input);
+function playerSelection(e) {
+  let input = e.target.dataset.piece
   let validOption = pieces.find((item) => item === input.toLowerCase());
   if (!validOption) {
     console.log("This is not an option.");
@@ -19,57 +32,35 @@ function playerSelection() {
   }
 }
 
-function computerPlay(playerSelection, computerSelection) {
-  let computer = computerSelection;
-  let player = playerSelection;
+function computerPlay(e) {
+  
+  let computer = computerSelection();
+  let player = e.target.dataset.piece;
+  console.log({computer,player});
   if (computer === player) {
-    console.log("It's a tie!!!");
-    return 't';
+    gameInfomation("It's a tie!!!");
   } else if (computer == "rock") {
     if (player == "paper") {
-      console.log("Player Win!!! Paper beats Rock!");
-      return 'p'
+      score.player++
     } else {
-      console.log("Oh! You Lose!!! Rock beats Scissor!");
-      return 'c'
+      score.computer++
     }
   } else if (computer == "paper") {
     if (player == "scissor") {
-      console.log("Player Win!!! Scissor beats Paper!");
-      return 'p'
+      score.player++
     } else {
-      console.log("Oh! You Lose!!! Peper beats Rock!");
-      return 'c'
+      score.computer++
     }
   } else if (computer == "scissor") {
     if (player == "rock") {
-      console.log("Player Win!!! Rock beats Scissor!");
-      return 'p'
+      score.player++
     } else {
-      console.log("Oh! You Lose!!! Scissor beats Paper!");
-      return 'c'
+      score.computer++
     }
   }
-  console.log(`${computer} ${player}`);
-}
-
-function gamePlay(){
-  let score = {
-   player: 0,
-   computer: 0,
-   tie: 0
+  if (score.player == 5 || score.computer == 5) {
+    let winner = (score.player == 5) ? 'You Win!' : 'Oh S**t You Loose!'
+    buttonsContainer.innerHTML = `<h2>${winner}<h2>`;
   }
-  for (let i = 0; i < 5; i++) {
-      let res = computerPlay(playerSelection(), computerSelection());
-      if (res == 'p') {
-        score.player++;
-      } else if(res == 'c'){
-        score.computer++;
-      }else{
-        score.tie++;
-      }
-  }
-  return score;
+  gameInfomation(`You:${score.player} | Computer:${score.computer}`);  
 }
-
-console.log(gamePlay())
