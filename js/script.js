@@ -35,9 +35,8 @@ function computerSelection() {
 function computerPlay(e) {
   let computer = computerSelection();
   let player = e.target.dataset.piece;
-  console.log({computer,player});
   if (computer === player) {
-    gameInfomation("It's a tie!!!");
+    
   } else if (computer == "rock") {
     if (player == "paper") {
       score.player++
@@ -61,5 +60,6 @@ function computerPlay(e) {
     let winner = (score.player == 5) ? 'You Win!' : 'Oh S**t You Loose!'
     buttonsContainer.innerHTML = `<h2>${winner}<h2>`;
   }
-  gameInfomation(`You:${score.player} | Computer:${score.computer}`);  
+  gameInfomation(`You: ${player} | Computer:${score.computer}
+  You:${score.player} | Computer:${score.computer}`);  
 }
