@@ -12,7 +12,7 @@ const score = {
 playButtons.forEach(btn => btn.addEventListener('click',computerPlay))
 
 function gameInfomation(string) {
-  paragraphResult.textContent = string
+  paragraphResult.innerHTML = string
   resultContainer.appendChild(paragraphResult)
 }
 
@@ -60,6 +60,6 @@ function computerPlay(e) {
     let winner = (score.player == 5) ? 'You Win!' : 'Oh S**t You Loose!'
     buttonsContainer.innerHTML = `<h2>${winner}<h2>`;
   }
-  gameInfomation(`You: ${player} | Computer:${score.computer}
-  You:${score.player} | Computer:${score.computer}`);  
+  gameInfomation(`You: ${player} | Computer: ${computer} <br>
+  You: ${score.player} | Computer: ${score.computer}`);  
 }
