@@ -105,7 +105,7 @@ body{
 .gridResult .btn{
     font-size: 2.5rem;
 }
-@media (max-width: 465px) {
+@media (max-width: 600px) {
     .header > h1{
         font-size: 1.2rem;
         text-shadow: 3px 3px black;
