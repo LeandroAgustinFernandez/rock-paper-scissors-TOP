@@ -14,7 +14,7 @@ body{
     justify-content: center;
     align-items: center;
     background-color: #593A2E;
-    height: 130px;   
+    min-height: 130px;   
 }
 .header > h1{
     margin: 0;
@@ -37,7 +37,7 @@ body{
 }
 .footer{
     background-color: #0D0000;
-    height: 80px;
+    min-height: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -107,7 +107,7 @@ body{
 }
 @media (max-width: 600px) {
     .header > h1{
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         text-shadow: 3px 3px black;
     }
     .btnActions{
@@ -122,5 +122,12 @@ body{
     }
     .gridResult .btn{
         font-size: 1.5rem;
+    }
+    .container{
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+    .score{
+        font-size: 1.2rem;
     }
 }
