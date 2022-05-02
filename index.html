@@ -1,30 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rock Paper Scissors</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <h1>Rock Paper Scissors</h1>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.css"
+      integrity="sha512-1hsteeq9xTM5CX6NsXiJu3Y/g+tj+IIwtZMtTisemEv3hx+S9ngaW4nryrNcPM4xGzINcKbwUJtojslX2KG+DQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <h1>Rock Paper Scissors</h1>
+    </header>
     <main class="container">
-        <section class="btnActions">
-            <button class="btn" data-piece="rock">
-                Rock
-            </button>
-            <button class="btn" data-piece="paper">
-                Paper
-            </button>
-            <button class="btn" data-piece="scissor">
-                Scissor
-            </button>
-        </section>       
-        <section class="result">
-           
-        </section>
+      <h2>Choose your weapon!</h2>
+      <section class="btnActions">
+        <i class="fa-solid fa-hand-back-fist btn" data-piece="rock"></i>
+        <i class="fa-solid fa-hand btn" data-piece="paper"></i>
+        <i class="fa-solid fa-hand-scissors btn" data-piece="scissor"></i>
+      </section>
+      <section class="result"></section>
     </main>
+    <footer class="footer">
+      <span class="label-copy">© Leandro Fernandez</span>
+      <a
+        href="https://github.com/LeandroAgustinFernandez/rock-paper-scissors-TOP"
+        target="_blank"
+        class="github"
+      >
+        <i class="fa-brands fa-github"></i>
+      </a>
+    </footer>
     <script src="js/script.js"></script>
-</body>
+  </body>
 </html>

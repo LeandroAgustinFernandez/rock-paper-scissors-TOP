@@ -21,17 +21,6 @@ function computerSelection() {
   return pieces[index];
 }
 
-// function playerSelection(e) {
-//   let input = e.target.dataset.piece
-//   let validOption = pieces.find((item) => item === input.toLowerCase());
-//   if (!validOption) {
-//     console.log("This is not an option.");
-//     return false;
-//   } else {
-//     return input;
-//   }
-// }
-
 function computerPlay(e) {
   let computer = computerSelection();
   let player = e.target.dataset.piece;
@@ -60,6 +49,6 @@ function computerPlay(e) {
     let winner = (score.player == 5) ? 'You Win!' : 'Oh S**t You Loose!'
     buttonsContainer.innerHTML = `<h2>${winner}<h2>`;
   }
-  gameInfomation(`You: ${player} | Computer: ${computer} <br>
-  You: ${score.player} | Computer: ${score.computer}`);  
+  gameInfomation(`<p class="players">You: ${player} | Computer: ${computer} </p>
+  <p>You: ${score.player} | Computer: ${score.computer}</p>`);  
 }
