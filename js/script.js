@@ -31,7 +31,6 @@ function gameInfomation(object) {
                   ${score.player} - ${score.computer}
                 </p>
               </div>`;
-
   paragraphResult.innerHTML = string;
   resultContainer.appendChild(paragraphResult);
 }
@@ -78,7 +77,7 @@ function computerPlay(e) {
     let winner = score.player == 5 ? "You Win!" : "Oh S**t You Loose!";
     resultContainer.innerHTML = "";
     resultContainer.innerHTML = `<article  class="resultflex">
-      <h2>${winner}<h2>
+      <h2>${winner}</h2>
       <button class="reset">Restart</button>
     <article>`;
     const btnReset = document.querySelector(".reset");

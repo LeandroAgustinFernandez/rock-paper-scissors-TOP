@@ -130,4 +130,7 @@ body{
     .score{
         font-size: 1.2rem;
     }
+    .reset{
+        font-size: 1.1rem;
+    }
 }
