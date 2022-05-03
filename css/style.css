@@ -81,10 +81,10 @@ body{
 .hidden{
     display: none;
 }
-.resultflex{
+/* .resultflex{
     display: flex;
     flex-direction: column;
-}
+} */
 .resultflex h2{
     font-size: 2rem;
 }
@@ -92,7 +92,6 @@ body{
     display: grid;
     grid-template-columns: 100px 100x;
     grid-template-rows: 1fr 100px;
-    
 }
 .score{
     font-size: 1.6rem;
