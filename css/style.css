@@ -81,10 +81,6 @@ body{
 .hidden{
     display: none;
 }
-/* .resultflex{
-    display: flex;
-    flex-direction: column;
-} */
 .resultflex h2{
     font-size: 2rem;
 }
@@ -105,6 +101,9 @@ body{
     font-size: 2.5rem;
 }
 @media (max-width: 600px) {
+    .header{
+        min-height: 50px;
+    }
     .header > h1{
         font-size: 1.1rem;
         text-shadow: 3px 3px black;
@@ -125,6 +124,8 @@ body{
     .container{
         margin-top: 20px;
         margin-bottom: 40px;
+        gap: 0.5rem;
+
     }
     .score{
         font-size: 1.2rem;
